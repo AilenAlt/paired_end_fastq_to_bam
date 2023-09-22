@@ -25,7 +25,7 @@ rule trim:
         '{srr}_trimm.log'
     shell:
         """
-        bbduk.sh in={input.in1} in2={input.in2} ref={params.adapters} ktrim=r k=23 hdist=1 tbo tpe mink=11 mlf=.5 rcomp=t out={params.out} out2={params.out2} 2> {log} && gzip {params.out} {paramsS.out2}
+        bbduk.sh in={input.in1} in2={input.in2} ref={params.adapters} ktrim=r k=23 hdist=1 tbo tpe mink=11 mlf=.5 rcomp=t out={params.out} out2={params.out2} 2> {log} && gzip {params.out} {params.out2}
         """
 
 rule qc:
