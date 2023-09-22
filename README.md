@@ -33,7 +33,7 @@ Additionally, you will need reference genome/index files for your specific analy
    
 4. Run the workflow using Snakemake:
     ```shell
-    snakemake --cores <number_of_cores>
+    snakemake --cores <number_of_cores> --use-conda
     ```
     Replace <number_of_cores> with the desired number of CPU cores.
 
